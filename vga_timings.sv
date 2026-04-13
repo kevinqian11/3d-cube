@@ -1,30 +1,31 @@
 `default_nettype none
+// VGA Display Timings 640x480
 module vga_timings
   (input logic clk, reset,
   output logic hsync, vsync,
-  output logic [9:0] x, y,
+  output logic [9:0] row, col,
   output logic display);
 
   // horizontal and vertical timings
   always_comb begin
-    hsync = ~(x >= 655 && x < 751);
-    vsync = ~(y >= 489 && y < 491);
-    display = (x <= 639 && y <= 479);
+    hsync = ~(col >= 655 && col < 751);
+    vsync = ~(row >= 489 && row < 491);
+    display = (col <= 639 && row <= 479);
   end
   
   // count xy screen position
   always_ff @(posedge clk) begin
     if(reset) begin
-      x <= 0;
-      y <= 0;
+      col <= 0;
+      row <= 0;
     end
     else begin
-      if(x == 799) begin
-        x <= 0;
-        y <= (y == 524) ? 0 : y + 1;
+      if(col == 799) begin
+        col <= 0;
+        row <= (row == 524) ? 0 : row + 1;
       end
       else begin
-        x <= x + 1;
+        col <= col + 1;
       end
     end
   end
