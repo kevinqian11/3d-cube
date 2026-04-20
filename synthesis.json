@@ -23,7 +23,7 @@
         }
       },
       "cells": {
-        "$specify$1591": {
+        "$specify$1612": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -428,37 +428,7 @@
         }
       },
       "cells": {
-        "$specify$78": {
-          "hide_name": 1,
-          "type": "$specify2",
-          "parameters": {
-            "DST_WIDTH": "00000000000000000000000000000001",
-            "FULL": "0",
-            "SRC_DST_PEN": "0",
-            "SRC_DST_POL": "0",
-            "SRC_WIDTH": "00000000000000000000000000000001",
-            "T_FALL_MAX": "00000000000000000000000010010111",
-            "T_FALL_MIN": "00000000000000000000000010010111",
-            "T_FALL_TYP": "00000000000000000000000010010111",
-            "T_RISE_MAX": "00000000000000000000000010010111",
-            "T_RISE_MIN": "00000000000000000000000010010111",
-            "T_RISE_TYP": "00000000000000000000000010010111"
-          },
-          "attributes": {
-            "src": "/Users/kevin/Documents/18-244/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:24.9-24.25"
-          },
-          "port_directions": {
-            "DST": "input",
-            "EN": "input",
-            "SRC": "input"
-          },
-          "connections": {
-            "DST": [ 7 ],
-            "EN": [ "1" ],
-            "SRC": [ 2 ]
-          }
-        },
-        "$specify$79": {
+        "$specify$100": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -488,7 +458,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$80": {
+        "$specify$101": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -518,7 +488,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$81": {
+        "$specify$102": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -548,7 +518,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$82": {
+        "$specify$103": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -576,6 +546,36 @@
             "DST": [ 7 ],
             "EN": [ "1" ],
             "SRC": [ 6 ]
+          }
+        },
+        "$specify$99": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000000010010111",
+            "T_FALL_MIN": "00000000000000000000000010010111",
+            "T_FALL_TYP": "00000000000000000000000010010111",
+            "T_RISE_MAX": "00000000000000000000000010010111",
+            "T_RISE_MIN": "00000000000000000000000010010111",
+            "T_RISE_TYP": "00000000000000000000000010010111"
+          },
+          "attributes": {
+            "src": "/Users/kevin/Documents/18-244/oss-cad-suite/libexec/../share/yosys/lattice/common_sim.vh:24.9-24.25"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 7 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
           }
         }
       },
@@ -662,7 +662,7 @@
         }
       },
       "cells": {
-        "$specify$83": {
+        "$specify$104": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -692,7 +692,7 @@
             "SRC": [ 2 ]
           }
         },
-        "$specify$84": {
+        "$specify$105": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -722,7 +722,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$85": {
+        "$specify$106": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -752,7 +752,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$86": {
+        "$specify$107": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -782,7 +782,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$87": {
+        "$specify$108": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -812,7 +812,7 @@
             "SRC": [ 6 ]
           }
         },
-        "$specify$88": {
+        "$specify$109": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -937,7 +937,7 @@
         }
       },
       "cells": {
-        "$specify$89": {
+        "$specify$110": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -967,7 +967,7 @@
             "SRC": [ 2 ]
           }
         },
-        "$specify$90": {
+        "$specify$111": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -997,7 +997,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$91": {
+        "$specify$112": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1027,7 +1027,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$92": {
+        "$specify$113": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1057,7 +1057,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$93": {
+        "$specify$114": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1087,7 +1087,7 @@
             "SRC": [ 6 ]
           }
         },
-        "$specify$94": {
+        "$specify$115": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1117,7 +1117,7 @@
             "SRC": [ 7 ]
           }
         },
-        "$specify$95": {
+        "$specify$116": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -21871,7 +21871,7 @@
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000000000000100"
+            "INIT": "0000000000000010"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -21993,7 +21993,7 @@
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000000100000000"
+            "INIT": "0000000000010000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -22118,7 +22118,7 @@
           },
           "connections": {
             "A0": [ 40 ],
-            "A1": [ 38 ],
+            "A1": [ 39 ],
             "B0": [ "0" ],
             "B1": [ "1" ],
             "C0": [ "1" ],
@@ -22201,8 +22201,8 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 26 ],
-            "A1": [ 36 ],
+            "A0": [ 27 ],
+            "A1": [ 37 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
@@ -22243,7 +22243,7 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 32 ],
+            "A0": [ 33 ],
             "A1": [ 29 ],
             "B0": [ "1" ],
             "B1": [ "1" ],
@@ -22328,7 +22328,7 @@
           },
           "connections": {
             "A0": [ 40 ],
-            "A1": [ 38 ],
+            "A1": [ 39 ],
             "B0": [ "0" ],
             "B1": [ "1" ],
             "C0": [ "1" ],
@@ -22411,8 +22411,8 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 26 ],
-            "A1": [ 36 ],
+            "A0": [ 27 ],
+            "A1": [ 37 ],
             "B0": [ "0" ],
             "B1": [ "1" ],
             "C0": [ "1" ],
@@ -22453,7 +22453,7 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 32 ],
+            "A0": [ 33 ],
             "A1": [ 29 ],
             "B0": [ "1" ],
             "B1": [ "1" ],
@@ -22498,7 +22498,7 @@
             "A0": [ "0" ],
             "A1": [ "0" ],
             "B0": [ 40 ],
-            "B1": [ 38 ],
+            "B1": [ 39 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
             "CIN": [ 74 ],
@@ -22579,8 +22579,8 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 26 ],
-            "A1": [ 36 ],
+            "A0": [ 27 ],
+            "A1": [ 37 ],
             "B0": [ "1" ],
             "B1": [ "1" ],
             "C0": [ "1" ],
@@ -22621,7 +22621,7 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 32 ],
+            "A0": [ 33 ],
             "A1": [ 29 ],
             "B0": [ "1" ],
             "B1": [ "1" ],
@@ -22791,8 +22791,8 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 26 ],
-            "B1": [ 36 ],
+            "B0": [ 27 ],
+            "B1": [ 37 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
             "CIN": [ 95 ],
@@ -22833,7 +22833,7 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 32 ],
+            "B0": [ 33 ],
             "B1": [ 29 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
@@ -22980,7 +22980,7 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 38 ],
+            "A": [ 39 ],
             "B": [ 40 ],
             "C": [ 50 ],
             "D": [ 35 ],
@@ -23005,10 +23005,10 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 36 ],
-            "B": [ 26 ],
+            "A": [ 37 ],
+            "B": [ 27 ],
             "C": [ 29 ],
-            "D": [ 32 ],
+            "D": [ 33 ],
             "Z": [ 106 ]
           }
         },
@@ -23142,7 +23142,7 @@
             "CLK": [ 109 ],
             "DI": [ 77 ],
             "LSR": [ 105 ],
-            "Q": [ 38 ]
+            "Q": [ 39 ]
           }
         },
         "timing.col_TRELLIS_FF_Q_1": {
@@ -23258,7 +23258,7 @@
             "CLK": [ 109 ],
             "DI": [ 84 ],
             "LSR": [ 105 ],
-            "Q": [ 36 ]
+            "Q": [ 37 ]
           }
         },
         "timing.col_TRELLIS_FF_Q_5": {
@@ -23287,7 +23287,7 @@
             "CLK": [ 109 ],
             "DI": [ 83 ],
             "LSR": [ 105 ],
-            "Q": [ 26 ]
+            "Q": [ 27 ]
           }
         },
         "timing.col_TRELLIS_FF_Q_6": {
@@ -23345,7 +23345,7 @@
             "CLK": [ 109 ],
             "DI": [ 72 ],
             "LSR": [ 105 ],
-            "Q": [ 32 ]
+            "Q": [ 33 ]
           }
         },
         "timing.col_TRELLIS_FF_Q_8": {
@@ -23434,7 +23434,7 @@
             "CLK": [ 109 ],
             "DI": [ 112 ],
             "LSR": [ 3 ],
-            "Q": [ 39 ]
+            "Q": [ 38 ]
           }
         },
         "timing.row_TRELLIS_FF_Q_1": {
@@ -23558,7 +23558,7 @@
             "CLK": [ 109 ],
             "DI": [ 116 ],
             "LSR": [ 3 ],
-            "Q": [ 37 ]
+            "Q": [ 36 ]
           }
         },
         "timing.row_TRELLIS_FF_Q_5": {
@@ -23589,7 +23589,7 @@
             "CLK": [ 109 ],
             "DI": [ 117 ],
             "LSR": [ 3 ],
-            "Q": [ 27 ]
+            "Q": [ 26 ]
           }
         },
         "timing.row_TRELLIS_FF_Q_6": {
@@ -23651,7 +23651,7 @@
             "CLK": [ 109 ],
             "DI": [ 119 ],
             "LSR": [ 3 ],
-            "Q": [ 33 ]
+            "Q": [ 32 ]
           }
         },
         "timing.row_TRELLIS_FF_Q_8": {
@@ -23795,7 +23795,7 @@
           },
           "connections": {
             "A0": [ 41 ],
-            "A1": [ 39 ],
+            "A1": [ 38 ],
             "B0": [ "1" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
@@ -23878,8 +23878,8 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 27 ],
-            "A1": [ 37 ],
+            "A0": [ 26 ],
+            "A1": [ 36 ],
             "B0": [ "0" ],
             "B1": [ "1" ],
             "C0": [ "1" ],
@@ -23920,7 +23920,7 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 33 ],
+            "A0": [ 32 ],
             "A1": [ 28 ],
             "B0": [ "0" ],
             "B1": [ "1" ],
@@ -24005,7 +24005,7 @@
           },
           "connections": {
             "A0": [ 41 ],
-            "A1": [ 39 ],
+            "A1": [ 38 ],
             "B0": [ "1" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
@@ -24088,8 +24088,8 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 27 ],
-            "A1": [ 37 ],
+            "A0": [ 26 ],
+            "A1": [ 36 ],
             "B0": [ "0" ],
             "B1": [ "1" ],
             "C0": [ "1" ],
@@ -24130,7 +24130,7 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 33 ],
+            "A0": [ 32 ],
             "A1": [ 28 ],
             "B0": [ "0" ],
             "B1": [ "1" ],
@@ -24217,7 +24217,7 @@
             "A0": [ "0" ],
             "A1": [ "0" ],
             "B0": [ 41 ],
-            "B1": [ 39 ],
+            "B1": [ 38 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
             "CIN": [ 151 ],
@@ -24298,8 +24298,8 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 27 ],
-            "A1": [ 37 ],
+            "A0": [ 26 ],
+            "A1": [ 36 ],
             "B0": [ "1" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
@@ -24342,8 +24342,8 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 27 ],
-            "B1": [ 37 ],
+            "B0": [ 26 ],
+            "B1": [ 36 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
             "CIN": [ 158 ],
@@ -24384,7 +24384,7 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 33 ],
+            "B0": [ 32 ],
             "B1": [ 28 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
@@ -24541,7 +24541,7 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 33 ],
+            "A0": [ 32 ],
             "A1": [ 28 ],
             "B0": [ "1" ],
             "B1": [ "1" ],
@@ -24641,38 +24641,13 @@
           },
           "connections": {
             "A": [ 28 ],
-            "B": [ 33 ],
+            "B": [ 32 ],
             "C": [ 43 ],
             "D": [ 44 ],
             "Z": [ 166 ]
           }
         },
         "vsync_LUT4_Z_D_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_LUT4_Z_A_LUT4_Z_1": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000010"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/kevin/Documents/18-244/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:128.32-129.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 39 ],
-            "B": [ 34 ],
-            "C": [ 37 ],
-            "D": [ 27 ],
-            "Z": [ 167 ]
-          }
-        },
-        "vsync_LUT4_Z_D_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_LUT4_Z_A_LUT4_Z_2": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -24695,6 +24670,31 @@
             "C": [ 41 ],
             "D": [ 42 ],
             "Z": [ 165 ]
+          }
+        },
+        "vsync_LUT4_Z_D_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_LUT4_Z_A_LUT4_Z_2": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/Users/kevin/Documents/18-244/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:128.32-129.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 38 ],
+            "B": [ 34 ],
+            "C": [ 36 ],
+            "D": [ 26 ],
+            "Z": [ 167 ]
           }
         }
       },
@@ -24844,7 +24844,7 @@
         },
         "col": {
           "hide_name": 0,
-          "bits": [ 16, 19, 32, 29, 26, 36, 35, 50, 40, 38 ],
+          "bits": [ 16, 19, 33, 29, 27, 37, 35, 50, 40, 39 ],
           "attributes": {
             "src": "draw.sv:12.20-12.23"
           }
@@ -25284,7 +25284,7 @@
         },
         "row": {
           "hide_name": 0,
-          "bits": [ 44, 43, 33, 28, 27, 37, 34, 42, 41, 39 ],
+          "bits": [ 44, 43, 32, 28, 26, 36, 34, 42, 41, 38 ],
           "attributes": {
             "src": "draw.sv:12.15-12.18"
           }
@@ -25346,7 +25346,7 @@
         },
         "timing.col": {
           "hide_name": 0,
-          "bits": [ 16, 19, 32, 29, 26, 36, 35, 50, 40, 38 ],
+          "bits": [ 16, 19, 33, 29, 27, 37, 35, 50, 40, 39 ],
           "attributes": {
             "hdlname": "timing col",
             "src": "vga_timings.sv:6.27-6.30"
@@ -25376,7 +25376,7 @@
         },
         "timing.row": {
           "hide_name": 0,
-          "bits": [ 44, 43, 33, 28, 27, 37, 34, 42, 41, 39 ],
+          "bits": [ 44, 43, 32, 28, 26, 36, 34, 42, 41, 38 ],
           "attributes": {
             "hdlname": "timing row",
             "src": "vga_timings.sv:6.22-6.25"

@@ -4,6 +4,7 @@ module rotation
     (input logic signed [2:0][7:0] A,
     input logic signed [7:0] cos, sin,
     input logic [1:0] axis,
+    input logic clk, en, reset,
     output logic signed [2:0][7:0] X);
 
     // Axis Rotation Multiply Values
@@ -26,32 +27,44 @@ module rotation
         endcase
     end
 
-    // Rotation Multiplys Q2.6
+    // Rotation Multiplys (4 multipliers, 8-bit Q2.6)
+    // Potentially reduce to 1 multiplier if needed
     logic signed [16:0] sum0, sum1;
     assign sum0 = (U * cos) - (V * sin);
     assign sum1 = (V * cos) + (U * sin);
 
     // Axis Rotation Outputs
+    logic signed [2:0][7:0] calc;
     always_comb begin
+        calc = A;
         case(axis)
             2'b00: begin // x-axis rotation
-                X[0] = A[0];
-                X[1] = 8'((sum1 + 16'd32) >>> 6);
-                X[2] = 8'((sum0 + 16'd32) >>> 6);
+                calc[0] = A[0];
+                calc[1] = 8'((sum1 + 16'd32) >>> 6);
+                calc[2] = 8'((sum0 + 16'd32) >>> 6);
             end
             2'b01: begin // y-axis rotation
-                X[0] = 8'((sum0 + 16'd32) >>> 6);
-                X[1] = A[1];
-                X[2] = 8'((sum1 + 16'd32) >>> 6);
+                calc[0] = 8'((sum0 + 16'd32) >>> 6);
+                calc[1] = A[1];
+                calc[2] = 8'((sum1 + 16'd32) >>> 6);
             end
             2'b10: begin // z-axis rotation
-                X[0] = 8'((sum1 + 16'd32) >>> 6);
-                X[1] = 8'((sum0 + 16'd32) >>> 6);
-                X[2] = A[2];
+                calc[0] = 8'((sum1 + 16'd32) >>> 6);
+                calc[1] = 8'((sum0 + 16'd32) >>> 6);
+                calc[2] = A[2];
             end
             default: begin
-                X = A;
+                calc = A;
             end
         endcase
+    end
+
+    always_ff @(posedge clk) begin
+        if(reset) begin
+            X <= '0;
+        end
+        else if(en) begin
+            X <= calc;
+        end
     end
 endmodule
