@@ -27,9 +27,10 @@ module rotation
         endcase
     end
 
-    // Rotation Multiplys (4 multipliers, 8-bit Q2.6)
-    // Potentially reduce to 1 multiplier if needed
+    // Rotation Multiplys (4 multipliers, 8-bit Q2.6, fancy math simplifications)
+    // potentially reduce to 1 sequential multiplier if too design large
     logic signed [16:0] sum0, sum1;
+
     assign sum0 = (U * cos) - (V * sin);
     assign sum1 = (V * cos) + (U * sin);
 
@@ -40,17 +41,17 @@ module rotation
         case(axis)
             2'b00: begin // x-axis rotation
                 calc[0] = A[0];
-                calc[1] = 8'((sum1 + 16'd32) >>> 6);
-                calc[2] = 8'((sum0 + 16'd32) >>> 6);
+                calc[1] = 8'((sum1 + 17'sd32) >>> 6);
+                calc[2] = 8'((sum0 + 17'sd32) >>> 6);
             end
             2'b01: begin // y-axis rotation
-                calc[0] = 8'((sum0 + 16'd32) >>> 6);
+                calc[0] = 8'((sum0 + 17'sd32) >>> 6);
                 calc[1] = A[1];
-                calc[2] = 8'((sum1 + 16'd32) >>> 6);
+                calc[2] = 8'((sum1 + 17'sd32) >>> 6);
             end
             2'b10: begin // z-axis rotation
-                calc[0] = 8'((sum1 + 16'd32) >>> 6);
-                calc[1] = 8'((sum0 + 16'd32) >>> 6);
+                calc[0] = 8'((sum1 + 17'sd32) >>> 6);
+                calc[1] = 8'((sum0 + 17'sd32) >>> 6);
                 calc[2] = A[2];
             end
             default: begin
