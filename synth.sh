@@ -2,7 +2,7 @@
 
 set -e
 
-FILES="src/rotation.sv src/trig.sv src/vertex.sv src/pll.sv src/vga_timings.sv src/control.sv src/draw.sv"
+FILES="src/rotation.sv src/trig.sv src/vertex.sv src/pll.sv src/vga_timings.sv src/control.sv src/color.sv src/draw.sv"
 
 TOP_MODULE="draw"
 

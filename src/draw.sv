@@ -37,7 +37,6 @@ module draw
   vertex map(.*);
 
   // display match vertex
-  logic point;
   logic [7:0] vertex_match; 
   always_comb begin
     vertex_match = 8'b0;
@@ -45,65 +44,10 @@ module draw
       vertex_match[i] = (col[9:1] == sx[i][9:1]) && (row[9:1] == sy[i][9:1]);
     end
   end
-  assign point = |vertex_match;
 
   // display color vertex
   // Later Implement Further Z direction = Lower Shade if there's room
   // Color each vertex a distinct color for emulation
-  party_colors test_vertex(.*);
+  two_face color_vertex(.*);
 
 endmodule: draw
-
-// Color each vertex a distinct color for emulation
-module party_colors
-  (input logic [7:0] vertex_match,
-  output logic [1:0] rbuf, gbuf, bbuf);
-
-  always_comb begin
-    if(vertex_match[0]) begin
-      rbuf = 2'b11;
-      gbuf = 2'b11;
-      bbuf = 2'b11;
-    end
-    else if(vertex_match[1]) begin
-      rbuf = 2'b00;
-      gbuf = 2'b11;
-      bbuf = 2'b11;
-    end
-    else if(vertex_match[2]) begin
-      rbuf = 2'b11;
-      gbuf = 2'b00;
-      bbuf = 2'b11;
-    end
-    else if(vertex_match[3]) begin
-      rbuf = 2'b11;
-      gbuf = 2'b11;
-      bbuf = 2'b00;
-    end
-    else if(vertex_match[4]) begin
-      rbuf = 2'b11;
-      gbuf = 2'b00;
-      bbuf = 2'b00;
-    end
-    else if(vertex_match[5]) begin
-      rbuf = 2'b00;
-      gbuf = 2'b11;
-      bbuf = 2'b00;
-    end
-    else if(vertex_match[6]) begin
-      rbuf = 2'b00;
-      gbuf = 2'b00;
-      bbuf = 2'b11;
-    end
-    else if(vertex_match[7]) begin
-      rbuf = 2'b10;
-      gbuf = 2'b10;
-      bbuf = 2'b10;
-    end
-    else begin
-      rbuf = 2'b00;
-      gbuf = 2'b00;
-      bbuf = 2'b00;
-    end
-  end
-endmodule: party_colors
