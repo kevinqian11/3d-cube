@@ -1,6 +1,7 @@
 `default_nettype none
 module draw
   (input logic clkin, reset,
+  input logic left, right,
   output logic hsync, vsync,
   output logic [1:0] r, g, b);
 
@@ -22,9 +23,9 @@ module draw
     b = (display) ? bbuf : 2'b00;
   end
 
-  // automatic angle accumulator (for emulation)
+  // X-axis angle control
   logic [7:0] angle;
-  auto_angle test_rotate(.*);
+  X_angle X_rotate(.*);
 
   // trig look-up table
   logic signed [7:0] sin, cos;
