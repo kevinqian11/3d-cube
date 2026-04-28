@@ -32,7 +32,7 @@ module draw
 
   // sequential vertex processing
   logic [7:0][10:0] sx, sy;
-  logic [1:0] axis = 2'b01; // temporary static spin for emulation
+  logic [1:0] axis = 2'b10; // temporary static spin for emulation
   vertex map(.*);
 
   // display match vertex
