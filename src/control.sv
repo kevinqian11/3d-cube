@@ -49,13 +49,17 @@ endmodule: X_angle
 // LeftZ and RightZ Button Angle Controls
 module Z_angle
   (input logic clk, rst_n, leftz, rightz,
-  output logic [7:0] angleZ);
+  output logic [7:0] angleZ,
+  output logic shape);
 
   logic [19:0] prescaler; // slow down spin
+  logic shapeshift;
   always_ff @(posedge clk) begin
     if(~rst_n) begin
       angleZ <= 8'd0;
       prescaler <= 20'd0;
+      shape <= 0;
+      shapeshift <= 0;
     end
     else begin
       if(prescaler == 0) begin 
@@ -63,6 +67,13 @@ module Z_angle
           angleZ <= angleZ - 1;
         end else if(leftz == 1 && rightz == 0) begin
           angleZ <= angleZ + 1;
+        end else if(leftz == 1 && rightz == 1) begin
+          if(~shapeshift) begin
+            shape <= ~shape;
+            shapeshift <= 1;
+          end
+        end else begin
+          shapeshift <= 0;
         end
       end
       prescaler <= prescaler + 1;

@@ -33,6 +33,7 @@ module draw
 
   // Z-axis angle control
   logic [7:0] angleZ;
+  logic shape;
   Z_angle Z_control(.*);
 
   // sequential vertex processing
