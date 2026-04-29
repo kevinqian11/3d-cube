@@ -22,8 +22,8 @@ module vertex
 
     // vertex rotation module
     logic [2:0] v_idx;
-    logic [2:0][7:0] A;
-    logic [2:0][7:0] X;
+    logic signed [2:0][7:0] A;
+    logic signed [2:0][7:0] X;
     logic [1:0] axis;
     logic en = 1'b1;
     rotation rot_unit(.*);
