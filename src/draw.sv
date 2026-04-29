@@ -1,6 +1,6 @@
 `default_nettype none
 module draw
-  (input logic clkin, reset,
+  (input logic clkin, rst_n,
   input logic left, right, up, down, leftz, rightz,
   output logic hsync, vsync,
   output logic [1:0] r, g, b);
@@ -25,15 +25,15 @@ module draw
 
   // Y-axis angle control
   logic [7:0] angleY;
-  Y_angle Y_rotate(.*);
+  Y_angle Y_control(.*);
 
   // X-axis angle control
   logic [7:0] angleX;
-  X_angle X_rotate(.*);
+  X_angle X_control(.*);
 
   // Z-axis angle control
   logic [7:0] angleZ;
-  Z_angle Z_rotate(.*);
+  Z_angle Z_control(.*);
 
   // sequential vertex processing
   logic [7:0][10:0] sx, sy;

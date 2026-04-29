@@ -1,7 +1,7 @@
 `default_nettype none
 
 module vertex 
-    (input logic clk, reset,
+    (input logic clk, rst_n,
     input logic vblank,
     input logic [7:0] angleX, angleY, angleZ,
     output logic [7:0][10:0] sx, sy);
@@ -30,8 +30,8 @@ module vertex
 
     // FSM transition logic
     always_ff @(posedge clk) begin
-        // reset
-        if (reset) begin
+        // reset state
+        if (~rst_n) begin
             state <= IDLE;
             v_idx <= 0;
             for (int i = 0; i < 8; i = i + 1) begin

@@ -1,11 +1,11 @@
 // Left and Right Button Angle Controls
 module Y_angle
-  (input logic clk, reset, left, right,
+  (input logic clk, rst_n, left, right,
   output logic [7:0] angleY);
 
   logic [19:0] prescaler; // slow down spin
   always_ff @(posedge clk) begin
-    if(reset) begin
+    if(~rst_n) begin
       angleY <= 8'd0;
       prescaler <= 20'd0;
     end
@@ -24,12 +24,12 @@ endmodule: Y_angle
 
 // Up and Down Button Angle Controls
 module X_angle
-  (input logic clk, reset, up, down,
+  (input logic clk, rst_n, up, down,
   output logic [7:0] angleX);
 
   logic [19:0] prescaler; // slow down spin
   always_ff @(posedge clk) begin
-    if(reset) begin
+    if(~rst_n) begin
       angleX <= 8'd0;
       prescaler <= 20'd0;
     end
@@ -48,12 +48,12 @@ endmodule: X_angle
 
 // LeftZ and RightZ Button Angle Controls
 module Z_angle
-  (input logic clk, reset, leftz, rightz,
+  (input logic clk, rst_n, leftz, rightz,
   output logic [7:0] angleZ);
 
   logic [19:0] prescaler; // slow down spin
   always_ff @(posedge clk) begin
-    if(reset) begin
+    if(~rst_n) begin
       angleZ <= 8'd0;
       prescaler <= 20'd0;
     end
@@ -72,12 +72,12 @@ endmodule: Z_angle
 
 // Automatic Angle Accumulator Emulation Module
 module auto_angle
-  (input logic clk, reset,
+  (input logic clk, rst_n,
   output logic [7:0] angle);
 
   logic [19:0] prescaler; // slow down spin
   always_ff @(posedge clk) begin
-    if(reset) begin
+    if(~rst_n) begin
       angle <= 8'd0;
       prescaler <= 20'd0;
     end
