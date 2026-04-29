@@ -3,8 +3,7 @@
 module vertex 
     (input logic clk, reset,
     input logic vblank,
-    input logic signed [7:0] cos, sin,
-    input logic [1:0] axis,
+    input logic [7:0] angleX, angleY, angleZ,
     output logic [7:0][10:0] sx, sy);
 
     // starting vertex coordinates
@@ -13,19 +12,21 @@ module vertex
     const logic signed [7:0][7:0] home_z = {-8'sd64, -8'sd64, -8'sd64, -8'sd64,  8'sd64,  8'sd64,  8'sd64,  8'sd64};
 
     // FSM states
-    typedef enum logic [2:0] {IDLE, ROTATE, WAIT, SAVE, DONE} state_t;
+    typedef enum logic [3:0] {IDLE, ROTATEY, WAITY, ROTATEX, WAITX, ROTATEZ, WAITZ, SAVE, DONE} state_t;
     state_t state = IDLE;
+
+    // trig look-up table
+    logic signed [7:0] sin, cos;
+    logic [7:0] angle;
+    trig_lut lookup(.*);
 
     // vertex rotation module
     logic [2:0] v_idx;
     logic [2:0][7:0] A;
     logic [2:0][7:0] X;
+    logic [1:0] axis;
     logic en = 1'b1;
     rotation rot_unit(.*);
-
-    assign A[0] = home_x[v_idx];
-    assign A[1] = home_y[v_idx];
-    assign A[2] = home_z[v_idx];
 
     // FSM transition logic
     always_ff @(posedge clk) begin
@@ -44,16 +45,44 @@ module vertex
                 IDLE: begin
                     if(vblank) begin
                         v_idx <= 0;
-                        state <= ROTATE;
+                        state <= ROTATEY;
                     end
                 end
                 
-                // start rotation
-                ROTATE: begin
-                    state <= WAIT;
+                // start Y rotation
+                ROTATEY: begin
+                    axis <= 2'b01;
+                    angle <= angleY;
+                    A[0] <= home_x[v_idx];
+                    A[1] <= home_y[v_idx];
+                    A[2] <= home_z[v_idx];
+                    state <= WAITY;
                 end
-                // wait for rotation to finish
-                WAIT: begin
+                WAITY: begin
+                    state <= ROTATEX;
+                end
+                // start X rotation
+                ROTATEX: begin
+                    axis <= 2'b00;
+                    angle <= angleX;
+                    A[0] <= X[0];
+                    A[1] <= X[1];
+                    A[2] <= X[2];
+                    state <= WAITX;
+                end
+                WAITX: begin
+                    state <= ROTATEZ;
+                end
+                // start Z rotation
+                ROTATEZ: begin
+                    axis <= 2'b10;
+                    angle <= angleZ;
+                    A[0] <= X[0];
+                    A[1] <= X[1];
+                    A[2] <= X[2];
+                    state <= WAITZ;
+                end
+                WAITZ: begin
                     state <= SAVE;
                 end
 
@@ -67,7 +96,7 @@ module vertex
                     end
                     else begin
                         v_idx <= v_idx + 3'd1;
-                        state <= ROTATE;
+                        state <= ROTATEY;
                     end
                 end
 
